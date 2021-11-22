@@ -112,7 +112,7 @@ data = dict(
             classes=('vehicle', 'person', 'non-vehicle'),
             ann_file=data_root + 'annotation_example_train.json',
             img_prefix=data_root + 'train',
-            min_size=20,
+            # min_size=20,
             pipeline=train_pipeline
         )
     ),
@@ -150,10 +150,10 @@ log_config = dict(
     ])
 # yapf:enable
 # runtime settings
-total_epochs = 20
+runner = dict(type='EpochBasedRunner', max_epochs=20)
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-work_dir = 'outputs/person-vehicle-bike-detection-2002'
-load_from = None
+work_dir = 'output'
+load_from = 'https://download.01.org/opencv/openvino_training_extensions/models/object_detection/v2/vehicle-person-bike-detection-2002-1.pth'
 resume_from = None
 workflow = [('train', 1)]

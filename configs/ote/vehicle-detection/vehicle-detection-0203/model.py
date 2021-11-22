@@ -221,7 +221,7 @@ data = dict(
             classes=('ignored', 'vehicle',),
             ann_file='data/annotations/instances_train2017car.json',
             img_prefix='data/train2017',
-            min_size=20,
+            # min_size=20,
             pipeline=train_pipeline)),
     val=dict(
         type=dataset_type,
@@ -251,11 +251,11 @@ log_config = dict(
     interval=50,
     hooks=[dict(type='TextLoggerHook'),
            dict(type='TensorboardLoggerHook')])
-total_epochs = 12
+runner = dict(type='EpochBasedRunner', max_epochs=12)
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-work_dir = './cascade_r50'
-load_from = None
+work_dir = 'output'
+load_from = 'https://download.01.org/opencv/openvino_training_extensions/models/object_detection/v3/vehicle-detection-0203.pth'
 resume_from = None
 workflow = [('train', 1)]
 gpu_ids = range(0, 1)

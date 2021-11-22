@@ -104,7 +104,7 @@ data = dict(
             type=dataset_type,
             classes=('face',),
             ann_file=data_root + '/train.json',
-            min_size=10,
+            # min_size=10,
             img_prefix=data_root,
             pipeline=train_pipeline
         )
@@ -143,10 +143,10 @@ log_config = dict(
     ])
 # yapf:enable
 # runtime settings
-total_epochs = 70
+runner = dict(type='EpochBasedRunner', max_epochs=70)
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-work_dir = 'outputs/face-detection-0205'
-load_from = None
+work_dir = 'output'
+load_from = 'https://storage.openvinotoolkit.org/repositories/openvino_training_extensions/models/object_detection/v2/face-detection-0205-retrained.pth'
 resume_from = None
 workflow = [('train', 1)]

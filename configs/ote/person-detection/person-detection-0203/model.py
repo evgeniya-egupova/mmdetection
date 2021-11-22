@@ -148,10 +148,10 @@ log_config = dict(
     ])
 # yapf:enable
 # runtime settings
-total_epochs = 20
+runner = dict(type='EpochBasedRunner', max_epochs=20)
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-work_dir = 'outputs/person-detection-0203'
-load_from = None
+work_dir = 'output'
+load_from = 'https://download.01.org/opencv/openvino_training_extensions/models/object_detection/v2/person-detection-0203.pth'
 resume_from = None
 workflow = [('train', 1)]

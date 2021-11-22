@@ -140,11 +140,11 @@ log_config = dict(
     ])
 # yapf:enable
 # runtime settings
-total_epochs = 25
+runner = dict(type='EpochBasedRunner', max_epochs=25)
 device_ids = range(4)
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-work_dir = 'outputs/horizontal-text-detection'
-load_from = None
+work_dir = 'output'
+load_from = 'https://download.01.org/opencv/openvino_training_extensions/models/object_detection/v2/horizontal-text-detection-0001.pth'
 resume_from = None
 workflow = [('train', 1)]

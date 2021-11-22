@@ -98,7 +98,7 @@ test_pipeline = [
         ])
 ]
 data = dict(
-    samples_per_gpu=5,
+    samples_per_gpu=4,
     workers_per_gpu=3,
     train=dict(
         type='RepeatDataset',
@@ -107,7 +107,6 @@ data = dict(
             type=dataset_type,
             classes=('face',),
             ann_file=data_root + '/train.json',
-            min_size=0,
             img_prefix=data_root,
             pipeline=train_pipeline
         )
@@ -146,10 +145,10 @@ log_config = dict(
     ])
 # yapf:enable
 # runtime settings
-total_epochs = 70
+runner = dict(type='EpochBasedRunner', max_epochs=70)
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-work_dir = 'outputs/face-detection-0206'
-load_from = None
+work_dir = 'output'
+load_from = 'https://download.01.org/opencv/openvino_training_extensions/models/object_detection/v2/face-detection-0206.pth'
 resume_from = None
 workflow = [('train', 1)]

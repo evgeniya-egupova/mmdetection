@@ -137,10 +137,10 @@ log_config = dict(
     ])
 # yapf:enable
 # runtime settings
-total_epochs = 70
+runner = dict(type='EpochBasedRunner', max_epochs=70)
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-work_dir = 'outputs/face-detection-0202'
-load_from = None
+work_dir = 'outputs'
+load_from = 'https://download.01.org/opencv/openvino_training_extensions/models/object_detection/v2/face-detection-0202.pth'
 resume_from = None
 workflow = [('train', 1)]
