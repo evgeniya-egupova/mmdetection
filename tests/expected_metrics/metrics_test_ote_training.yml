@@ -11,11 +11,74 @@
         'metrics.accuracy.f-measure':
                 'base': 'export_evaluation.metrics.accuracy.f-measure'
                 'max_diff': 0.01
-'ACTION-nncf_evaluation,model-gen3_mobilenetV2_ATSS,dataset-bbcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+'ACTION-nncf_evaluation,model-gen3_mobilenetV2_ATSS,dataset-bbcd,num_iters-KEEP_CO NFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
         'metrics.accuracy.f-measure':
                 'base': 'training_evaluation.metrics.accuracy.f-measure'
                 'max_diff_if_less_threshold': 0.01
 'ACTION-nncf_export_evaluation,model-gen3_mobilenetV2_ATSS,dataset-bbcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'nncf_evaluation.metrics.accuracy.f-measure'
+                'max_diff': 0.01
+'ACTION-training_evaluation,model-gen3_mobilenetV2_ATSS,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'target_value': 0.944
+                'max_diff_if_less_threshold': 0.005
+                'max_diff_if_greater_threshold': 0.015
+'ACTION-export_evaluation,model-gen3_mobilenetV2_ATSS,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'training_evaluation.metrics.accuracy.f-measure'
+                'max_diff': 0.01
+'ACTION-pot_evaluation,model-gen3_mobilenetV2_ATSS,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'export_evaluation.metrics.accuracy.f-measure'
+                'max_diff': 0.01
+'ACTION-nncf_evaluation,model-gen3_mobilenetV2_ATSS,dataset-pcd,num_iters-KEEP_CO NFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'training_evaluation.metrics.accuracy.f-measure'
+                'max_diff_if_less_threshold': 0.01
+'ACTION-nncf_export_evaluation,model-gen3_mobilenetV2_ATSS,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'nncf_evaluation.metrics.accuracy.f-measure'
+                'max_diff': 0.01
+'ACTION-training_evaluation,model-gen3_mobilenetV2_SSD,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'target_value': 0.924
+                'max_diff_if_less_threshold': 0.005
+                'max_diff_if_greater_threshold': 0.015
+'ACTION-export_evaluation,model-gen3_mobilenetV2_SSD,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'training_evaluation.metrics.accuracy.f-measure'
+                'max_diff': 0.01
+'ACTION-pot_evaluation,model-gen3_mobilenetV2_SSD,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'export_evaluation.metrics.accuracy.f-measure'
+                'max_diff': 0.01
+'ACTION-nncf_evaluation,model-gen3_mobilenetV2_SSD,dataset-pcd,num_iters-KEEP_CO NFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'training_evaluation.metrics.accuracy.f-measure'
+                'max_diff_if_less_threshold': 0.01
+'ACTION-nncf_export_evaluation,model-gen3_mobilenetV2_SSD,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'nncf_evaluation.metrics.accuracy.f-measure'
+                'max_diff': 0.01
+'ACTION-training_evaluation,model-gen3_mobilenetV2_VFNet,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'target_value': 0.973
+                'max_diff_if_less_threshold': 0.005
+                'max_diff_if_greater_threshold': 0.015
+'ACTION-export_evaluation,model-gen3_mobilenetV2_VFNet,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'training_evaluation.metrics.accuracy.f-measure'
+                'max_diff': 0.01
+'ACTION-pot_evaluation,model-gen3_mobilenetV2_VFNet,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'export_evaluation.metrics.accuracy.f-measure'
+                'max_diff': 0.01
+'ACTION-nncf_evaluation,model-gen3_mobilenetV2_VFNet,dataset-pcd,num_iters-KEEP_CO NFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
+        'metrics.accuracy.f-measure':
+                'base': 'training_evaluation.metrics.accuracy.f-measure'
+                'max_diff_if_less_threshold': 0.01
+'ACTION-nncf_export_evaluation,model-gen3_mobilenetV2_VFNet,dataset-pcd,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
         'metrics.accuracy.f-measure':
                 'base': 'nncf_evaluation.metrics.accuracy.f-measure'
                 'max_diff': 0.01
