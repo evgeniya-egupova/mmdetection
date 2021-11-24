@@ -112,7 +112,7 @@ data = dict(
             classes=('vehicle', 'person', 'non-vehicle'),
             ann_file=data_root + 'annotation_example_train.json',
             img_prefix=data_root + 'train',
-            min_size=20,
+            #min_size=20,
             pipeline=train_pipeline
         )
     ),

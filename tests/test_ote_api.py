@@ -533,3 +533,36 @@ class API(unittest.TestCase):
     def test_training_gen3_vfnet(self):
         self.end_to_end(osp.join('configs', 'ote', 'custom-object-detection', 'gen3_resnet50_VFNet'),
             export_perf_delta_tolerance=0.01)
+        
+    def test_training_OD_face_200(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'face-detection', 'face-detection-0200'))
+        
+    def test_training_OD_face_202(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'face-detection', 'face-detection-0202'))
+        
+    def test_training_OD_face_204(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'face-detection', 'face-detection-0204'))
+        
+    def test_training_OD_face_205(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'face-detection', 'face-detection-0205'))
+        
+    def test_training_OD_face_206(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'face-detection', 'face-detection-0206'))
+        
+    def test_training_OD_face_207(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'face-detection', 'face-detection-0207'))
+        
+    def test_training_OD_HTD(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'horizontal-text-detection', 'horizontal-text-detection-0001'))
+
+    def test_training_OD_person_200(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'person-detection', 'person-detection-0200'))
+
+    def test_training_OD_person_201(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'person-detection', 'person-detection-0201'))
+
+    def test_training_OD_person_202(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'person-detection', 'person-detection-0202'))
+
+    def test_training_OD_person_203(self):
+        self.end_to_end(osp.join('../configs', 'ote', 'person-detection', 'person-detection-0203'))

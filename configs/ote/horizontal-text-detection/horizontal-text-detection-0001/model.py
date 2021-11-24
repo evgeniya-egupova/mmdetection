@@ -50,7 +50,7 @@ model = dict(
         score_thr=0.25,
         nms=dict(type='nms', iou_threshold=0.5),
         max_per_img=100))
-evaluation = dict(interval=1, metric=['bbox', 'f1'], score_thr=0.25)
+evaluation = dict(interval=1, metric='mAP')
 # dataset settings
 dataset_type = 'CocoDataset'
 data_root = 'data/text-dataset/'
