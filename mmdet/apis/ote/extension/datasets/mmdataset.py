@@ -16,7 +16,7 @@ from copy import deepcopy
 from typing import List
 
 import numpy as np
-from ote_sdk.entities.annotation import AnnotationSceneEntity
+from ote_sdk.entities.annotation import AnnotationSceneEntity, AnnotationSceneKind, Annotation
 from ote_sdk.entities.dataset_item import DatasetItemEntity
 from ote_sdk.entities.datasets import DatasetEntity
 from ote_sdk.entities.shapes.rectangle import Rectangle
@@ -201,25 +201,22 @@ class OTEDataset(CustomDataset):
 
     def filter_small_gt(self, item: dict) -> dict:
         """
-        Function to convert a OTE annotation to mmdetection format. This is used both in the OTEDataset class defined in
-        this file as in the custom pipeline element 'LoadAnnotationFromOTEDataset'
+        Function to filter instances in DatasetItem if its width or height is smaller than self.min_size
 
-        :param dataset_item: DatasetItem for which to get annotations
-        :param label_list: List of label names in the project
-        :return dict: annotation information dict in mmdet format
+        :param item: 'data_info' dict that represents the DatasetItem
+        :return dict: the same dict with filtered instances
         """
         dataset_item = item['dataset_item']
         width, height = dataset_item.width, dataset_item.height
-        gt_bboxes = []
+        filtered_anns = []
 
         for ann in dataset_item.get_annotations():
             box = ann.shape
             if min(box.width * width, box.height * height) >= self.min_size:
-                print(box)
-                gt_bboxes.append(ann)
-        ann_scene = dataset_item.annotation_scene
-        ann_scene.annotations(gt_bboxes)
+                filtered_anns.append(ann)
+        if len(filtered_anns) == 0:
+            print(f'All instances on the image are smaller than min_size={self.min_size} - the image was skipped')
 
-        dataset_item.annotation_scene(ann_scene)
+        dataset_item.annotation_scene.annotations = filtered_anns
         item['dataset_item'] = dataset_item
         return item
