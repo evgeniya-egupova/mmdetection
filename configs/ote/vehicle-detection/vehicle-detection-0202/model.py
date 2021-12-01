@@ -112,7 +112,7 @@ data = dict(
             classes=('vehicle',),
             ann_file='data/annotations/instances_train2017car.json',
             img_prefix='data/train2017',
-            # min_size=20,
+            min_size=20,
             pipeline=train_pipeline
         )
     ),

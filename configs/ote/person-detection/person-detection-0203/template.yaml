@@ -32,7 +32,7 @@ hyper_parameters:
         default_value: 20
     nncf_optimization:
       enable_quantization:
-        default_value: true
+        default_value: false
       enable_pruning:
         default_value: false
       maximal_accuracy_degradation:
@@ -42,7 +42,7 @@ hyper_parameters:
 max_nodes: 1
 training_targets:
   - GPU
-#  - CPU
+  - CPU
 
 # Stats.
 gigaflops: 6.74

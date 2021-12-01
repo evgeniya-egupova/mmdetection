@@ -113,7 +113,7 @@ data = dict(
             type=dataset_type,
             classes=('person',),
             ann_file=data_root + 'annotation_person_train.json',
-            # min_size=20,
+            min_size=20,
             img_prefix=data_root + 'train',
             pipeline=train_pipeline
         )

@@ -104,7 +104,7 @@ data = dict(
             type=dataset_type,
             classes=('face',),
             ann_file=data_root + '/train.json',
-            # min_size=10,
+            min_size=10,
             img_prefix=data_root,
             pipeline=train_pipeline
         )
