@@ -162,7 +162,7 @@ def main(args):
     results = []
     prog_bar = mmcv.ProgressBar(len(dataset))
     for i, data in enumerate(data_loader):
-        im_data = data['img'][0].data[0].cpu().numpy()
+        im_data = data['img'][0].data.cpu().numpy()
         try:
             result = model(im_data)
             result = postprocess(
