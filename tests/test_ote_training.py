@@ -1325,7 +1325,7 @@ class TestOTEIntegration:
                     'gen3_mobilenetV2_SSD',
                     'gen3_mobilenetV2_ATSS',
                 ],
-                dataset_name='dice',
+                dataset_name='aerial',
                 num_training_iters=KEEP_CONFIG_FIELD_VALUE(),
                 batch_size=KEEP_CONFIG_FIELD_VALUE(),
                 usecase=REALLIFE_USECASE_CONSTANT(),
