@@ -1320,6 +1320,16 @@ class TestOTEIntegration:
                 batch_size=KEEP_CONFIG_FIELD_VALUE(),
                 usecase=REALLIFE_USECASE_CONSTANT(),
             ),
+            dict(
+                model_name=[
+                    'gen3_mobilenetV2_SSD',
+                    'gen3_mobilenetV2_ATSS',
+                ],
+                dataset_name='dice',
+                num_training_iters=KEEP_CONFIG_FIELD_VALUE(),
+                batch_size=KEEP_CONFIG_FIELD_VALUE(),
+                usecase=REALLIFE_USECASE_CONSTANT(),
+            ),
     ]
 
     @staticmethod
