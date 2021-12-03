@@ -21,7 +21,7 @@
                 'max_diff': 0.01
 'ACTION-training_evaluation,model-gen3_mobilenetV2_SSD,dataset-aerial,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
         'metrics.accuracy.f-measure':
-                'target_value': 0.895
+                'target_value': 0.561
                 'max_diff_if_less_threshold': 0.005
                 'max_diff_if_greater_threshold': 0.03
 'ACTION-export_evaluation,model-gen3_mobilenetV2_SSD,dataset-aerial,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
@@ -42,7 +42,7 @@
                 'max_diff': 0.01
 'ACTION-training_evaluation,model-gen3_mobilenetV2_ATSS,dataset-aerial,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
         'metrics.accuracy.f-measure':
-                'target_value': 0.939
+                'target_value': 0.622
                 'max_diff_if_less_threshold': 0.005
                 'max_diff_if_greater_threshold': 0.03
 'ACTION-export_evaluation,model-gen3_mobilenetV2_ATSS,dataset-aerial,num_iters-KEEP_CONFIG_FIELD_VALUE,batch-KEEP_CONFIG_FIELD_VALUE,usecase-reallife':
